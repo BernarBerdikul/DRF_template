@@ -1,16 +1,12 @@
 создать и запустить виртуальное пространство:
 `python -m venv env`
 
-`cd env`
-
-`cd Scripts`
+`cd env/Scripts`
 
 `activate`
 
-`cd ../..`
-
 Сколнировать репозиторий: 
-`git clone https://github.com/BernarBerdikulG/menushka.git`
+`https://github.com/BernarBerdikul/DRF_template.git`
 
 
 Перейти в папку проекта:
@@ -19,7 +15,6 @@
 
 Скачать все нужные библиотеки: 
 `pip install -r requirements.txt`
-
 
 Скопировать файл .env.example в ту же папку и переимновать в .env
 
@@ -30,10 +25,8 @@
 `py manage.py makemigrations`
 `py manage.py migrate`
 
-
 Создать супер пользователя:
 `py manage.py createsuperuser`
-
 
 Запустить проект: 
 `py manage.py runserver`
