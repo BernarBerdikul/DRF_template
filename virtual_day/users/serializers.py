@@ -19,10 +19,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     @query_debugger
     def register(self, validated_data):
-        """ Register new manager, create object in model WebsiteCallback, after that
-            create manager account, generate password, create language setting for him
-            (default is russian), create token for his device and send his login and
-            new password on email """
+        """ Register new user """
         validate_phone_number(validated_data.get("phone"))
         email = validated_data.get("email")
         login = validate_login(validated_data.get("login"))
