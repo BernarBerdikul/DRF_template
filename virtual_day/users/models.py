@@ -35,8 +35,6 @@ class User(AbstractBaseUser, PermissionsMixin, TimestampMixin):
                              verbose_name=_("Телефон"))
     password_changed_datetime = models.DateTimeField(editable=False, null=True, verbose_name="")
     is_active = models.BooleanField(default=True, verbose_name=_("Активность"))
-    language = models.CharField(choices=settings.LANGUAGES, max_length=32, default='ru',
-                                verbose_name=_("Выбранный язык"))
 
     USERNAME_FIELD = 'login'
 
